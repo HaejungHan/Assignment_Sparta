@@ -27,7 +27,7 @@ public class App {
         } else if (operationStr.equals("*")) { // 사칙연산 기호 입력값과 "*"와 일치하면
             result = num1 * num2; // result 값은 num1 * num2
         } else if (operationStr.equals("/")) { // 사칙연산 기호 입력값과 "/"와 일치하면
-            if (num2 == 0){ // num2에 0을 입력했다면
+            if (num2 == 0){ // num2(두번쨰 정수)에 0을 입력했다면
                 System.out.println("나눗셈 연산에서 분모(두번째 정수)에 O이 입력될 수 없습니다."); // 해당 출력
             } else { // 아니면
                 result = num1 / num2; // result 값은 num1 / num2 출력됨
@@ -39,27 +39,27 @@ public class App {
 
        // 2) switch문으로 사칙연산
 //        int result = 0; // 사칙연산 결과 초기화
-//        switch (operationStr) {
-//            case "+":
-//                result = num1 + num2;
+//        switch (operationStr) { // 사칙연산 기호의 입력값과 case별 비교
+//            case "+": // 사칙연산 기호 입력값과 + 가 일치한다면
+//                result = num1 + num2; // result 값은 num1 + num2
+//                break; // 그리고 종료
+//            case "-": // 사칙연산 기호 입력값과 - 가 일치한다면
+//                result = num1 - num2; // result 값은 num1 - num2
 //                break;
-//            case "-":
-//                result = num1 - num2;
+//            case "*": // 사칙연산 기호 입력값과 * 가 일치한다면
+//                result = num1 * num2; // result 값은 num1 * num2
 //                break;
-//            case "*":
-//                result = num1 * num2;
-//                break;
-//            case "/":
-//                if (num2 == 0){ // num2에 0을 입력했다면
+//            case "/": // 사칙연산 기호 입력값과 / 가 일치한다면
+//                if (num2 == 0){ // num2 (두번째 정수)에 0을 입력했다면
 //                System.out.println("나눗셈 연산에서 분모(두번째 정수)에 O이 입력될 수 없습니다."); // 해당 출력
 //                 } else { // 아니면
-//                result = num1 / num2; // result 값은 num1 / num2 출력됨
+//                result = num1 / num2; // result 값은 num1 / num2
 //                }
 //                break;
 //            default:
-//                System.out.println("잘못 입력하셨습니다.");
+//                System.out.println("잘못 입력하셨습니다."); // 그 밖에 해당 출력
 //        }
-//        System.out.println("결과: " + result);
+//        System.out.println("결과: " + result); // 결과값 출력
 
 
 
