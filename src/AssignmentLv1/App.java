@@ -17,7 +17,7 @@ public class App {
             int[] resultArr = new int[10]; // 결과값이 입력될 배열생성
 //            int lastIndex = resultArr[9];
 
-            for (int i = 0; i < resultArr.length; i++) {
+            for (int i = 0; i < resultArr.length; i++) { // 배열의 길이만큼 결과 값을 저장할 반복문
                 System.out.print("첫 번째 숫자를 입력하세요: ");
                 int num1 = sc.nextInt(); // 첫 번째 숫자 입력값 생성
                 System.out.print("두 번째 숫자를 입력하세요: ");
@@ -34,9 +34,9 @@ public class App {
                 } else if (operationStr.equals("*")) { // 사칙연산 기호 입력값과 "*"와 일치하면
                     result = num1 * num2; // result 값은 num1 * num2
                 } else if (operationStr.equals("/")) { // 사칙연산 기호 입력값과 "/"와 일치하면
-                    if ((num2 > num1) && (num2 == 0)) { // num2(두번쨰 정수)가 num1보다 클 경우
+                    if ((num2 > num1) || (num2 == 0)) { // num2(두번쨰 정수)가 num1보다 크거나 0일 경우
                         System.out.println("나눗셈 연산에서 분모(두번째 정수)에 " + num2 + "은 입력될 수 없습니다."); // 해당 출력
-                        break;
+                        break; // 종료
                     } else { // 아니면
                         result = num1 / num2; // result 값은 num1 / num2 출력됨
                     }
