@@ -13,9 +13,9 @@ public class App {
         System.out.print("두 번째 숫자를 입력하세요: ");
         int num2 = sc.nextInt(); // 두 번째 숫자 입력값 생성
         // Scanner를 사용하여 사칙연산 기호를 전달 받을 수 있습니다.
-//        System.out.print("사칙연산 기호를 입력하세요: ");
-//        String operationStr = sc.next(); // 사칙연산 입력값 생성 (char타입으로는 scanner 입력값 저장 불가)
-//        char operationChar = operationStr.charAt(0); // char타입으로 변환하여 operationStr의 0번째 인덱스의 값을 변수에 저장
+        System.out.print("사칙연산 기호를 입력하세요: ");
+        String operationStr = sc.next(); // 사칙연산 입력값 생성 (char타입으로는 scanner 입력값 저장 불가)
+        char operationChar = operationStr.charAt(0); // char타입으로 변환하여 operationStr의 0번째 인덱스의 값을 변수에 저장
 
         // 입력받은 양의 정수 2개와 사칙연산 기호를 사용하여 연산을 진행한 후 결과값을 출력합니다.
         // 1. if문으로 사칙연산
