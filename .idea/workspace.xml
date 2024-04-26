@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe5be3f2-1d23-4101-95b4-bdf74fb06820" name="Changes" comment="&quot;Lv.1의 2번 문제풀이&quot;">
+    <list default="true" id="fe5be3f2-1d23-4101-95b4-bdf74fb06820" name="Changes" comment="&quot;Lv.1의 3번 문제풀이 중 2) switch문 주석 추가&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AssignmentLv1/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AssignmentLv1/App.java" afterDir="false" />
     </list>
@@ -75,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714099038245</updated>
-      <workItem from="1714099039352" duration="5805000" />
+      <workItem from="1714099039352" duration="12172000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Lv.1의 1번 문제풀이&quot;">
       <option name="closed" value="true" />
@@ -93,7 +93,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714103813176</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;Lv.1의 3번 문제풀이&quot;">
+      <option name="closed" value="true" />
+      <created>1714104937321</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714104937322</updated>
+    </task>
+    <task id="LOCAL-00004" summary="&quot;Lv.1의 3번 문제풀이 중 2) switch문 주석 추가&quot;">
+      <option name="closed" value="true" />
+      <created>1714105385777</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714105385778</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +118,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Lv.1의 1번 문제풀이&quot;" />
     <MESSAGE value="&quot;Lv.1의 2번 문제풀이&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Lv.1의 2번 문제풀이&quot;" />
+    <MESSAGE value="&quot;Lv.1의 3번 문제풀이&quot;" />
+    <MESSAGE value="&quot;Lv.1의 3번 문제풀이 중 2) switch문 주석 추가&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Lv.1의 3번 문제풀이 중 2) switch문 주석 추가&quot;" />
   </component>
 </project>
