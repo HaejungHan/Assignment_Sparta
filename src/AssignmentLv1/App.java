@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
 
-        // 7. 연산 결과가 10개로 고정되지 않고 무한이 저장될 수 있도록 소스 코드를 수정합니다.
+       // 8. “inquiry”라는 문자열이 입력되면 저장된 연산 결과 전부를 출력합니다.
         Scanner sc = new Scanner(System.in); // 입력값 받는 Scanner 생성
 
         int result = 0; // 사칙연산 결과 초기화
@@ -55,6 +55,14 @@ public class App {
             if (removeValue.equals("remove")) { //  입력값이 remove와 같다면
                 resultArr.remove(0); // 인덱스번호 0 (가장 먼저 저장된 값) 삭제
 //                System.out.println(resultArr.toString()); // 배열 인덱스0번의 값이 제거되었는지 확인
+            }
+
+            System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
+            String showResult = sc.next();
+            if (showResult.equals("inquiry")) {
+                for (Integer showAll : resultArr) {
+                    System.out.println("저장된 결과 : " + showAll);
+                }
             }
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
