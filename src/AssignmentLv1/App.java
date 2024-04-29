@@ -16,7 +16,7 @@ public class App {
         int index = 0;
 
         do { // do 구문은 무조건 실행
-                for (int i = 0; i < resultArr.length; i++) {
+                for (int i = 0; i < resultArr.length + 1; i++) {
 
                     System.out.print("첫 번째 숫자를 입력하세요: ");
                     int num1 = sc.nextInt(); // 첫 번째 숫자 입력값 생성
@@ -44,8 +44,16 @@ public class App {
                         System.out.println("잘못 입력하셨습니다. "); // 그 밖에는 해당 출력
                     }
                     System.out.println("결과: " + result); // 결과값 출력
-                    index++;
-                    resultArr[i] = result;
+                    System.out.println("i는? " + i);
+                    System.out.println("index번호는? " + index);
+                    if(index >= 3) {
+                        for (int j = 0; j < resultArr.length - 1; j++) {
+                            resultArr[j] = resultArr[j+1];
+                            System.out.println("전체배열의 입력된 값은?" + resultArr[j]);
+                        }
+                    } else {
+                            resultArr[index] = result;
+                    }
 
                     System.out.println(Arrays.toString(resultArr)); // 결과값이 잘 들어갔는지 확인
 //                System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
@@ -57,6 +65,7 @@ public class App {
                     } else { // 입력값이 exit라면
                         break; // do-while 반복문 종료
                     }
+                index++;
                 }
         } while (stop); // stop의 true/false 여부에 따라 do 구문 실행
     }
