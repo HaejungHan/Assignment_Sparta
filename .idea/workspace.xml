@@ -53,7 +53,7 @@
   "keyToString": {
     "Application.App.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "16f2f936",
+    "git-widget-placeholder": "640e0eb8",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -149,11 +149,41 @@
       <option name="project" value="LOCAL" />
       <updated>1714142380703</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="&quot;Lv.1의 6번 문제풀이 완료&quot;">
+      <option name="closed" value="true" />
+      <created>1714397006214</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714397006214</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Lv.1의 1번 문제풀이&quot;" />
@@ -163,6 +193,7 @@
     <MESSAGE value="&quot;Lv.1의 4번 문제풀이&quot;" />
     <MESSAGE value="&quot;Lv.1의 5번 문제풀이&quot;" />
     <MESSAGE value="&quot;Lv.1의 6번 문제풀이 미완성&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Lv.1의 6번 문제풀이 미완성&quot;" />
+    <MESSAGE value="&quot;Lv.1의 6번 문제풀이 완료&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Lv.1의 6번 문제풀이 완료&quot;" />
   </component>
 </project>

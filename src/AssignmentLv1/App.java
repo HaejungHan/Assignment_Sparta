@@ -12,7 +12,7 @@ public class App {
 
         int result = 0; // 사칙연산 결과 초기화
         boolean stop = false; // 반복문 실행 여부 변수 생성
-        int[] resultArr = new int[3]; // 결과값이 입력될 배열생성 resultArr = [2, 3, 4];
+        int[] resultArr = new int[10]; // 결과값이 입력될 배열생성 resultArr = [2, 3, 4];
         int index = 0;
 
         do { // do 구문은 무조건 실행
@@ -44,18 +44,17 @@ public class App {
                     }
                     System.out.println("결과: " + result); // 결과값 출력
 
-                    if(index == 3) { // index가 마지막 번호일 때
-                        for (int j = 0; j < resultArr.length - 1; j++) { // 최근 저장된 인덱스 값 (2)개를 앞으로 이동 시키기 위해 범위는 -1
-                            resultArr[j] = resultArr[j+1]; // 마지막 저장된 인덱스값 (2)개를 앞으로 한칸씩 이동
-                            System.out.println("resultArr[" + j + "]" + resultArr[j]);  // 입력값 확인
+                    if(index == 10) { // index가 마지막 번호일 때
+                        for (int j = 0; j < resultArr.length - 1; j++) { // 최근 저장된 인덱스 값 (9)개를 앞으로 이동 시키기 위해 범위는 -1
+                            resultArr[j] = resultArr[j+1]; // 마지막 저장된 인덱스값 (9)개를 앞으로 한칸씩 이동
+//                            System.out.println("resultArr[" + j + "]" + resultArr[j]);  // 입력값 확인
                         }
                         index--; // 마지막 인덱스 번호 저장을 위해 하나 줄이기
                     }
                     resultArr[index] = result; // 인덱스번호에 결과값 저장 & 마지막 인덱스 번호에 결과값 저장
                     index++; // 저장된 값이 1개 추가 되었으니 인덱스값도 + 1 증가
-                    System.out.println("index번호는? " + index); // 인덱스 번호 확인
-                    System.out.println(Arrays.toString(resultArr)); // 결과값이 잘 들어갔는지 확인
-//                System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
+//                    System.out.println("index번호는? " + index); // 인덱스 번호 확인
+//                    System.out.println(Arrays.toString(resultArr)); // 결과값이 잘 들어갔는지 확인
 
                     System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
                     String exitStr = sc.next(); // 종료 여부 입력값 생성
