@@ -58,9 +58,9 @@ public class App {
             }
 
             System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
-            String showResult = sc.next();
-            if (showResult.equals("inquiry")) {
-                for (Integer showAll : resultArr) {
+            String showResult = sc.next(); // inquiry 여부 입력값 생성
+            if (showResult.equals("inquiry")) { // 입력값이 inquiry와 같다면
+                for (Integer showAll : resultArr) { // 향상된 for반복문으로 배열의 값 전체 조회
                     System.out.println("저장된 결과 : " + showAll);
                 }
             }
