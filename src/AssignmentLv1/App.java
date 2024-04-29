@@ -16,7 +16,6 @@ public class App {
         int index = 0;
 
         do { // do 구문은 무조건 실행
-                for (int i = 0; i < resultArr.length + 1; i++) {
 
                     System.out.print("첫 번째 숫자를 입력하세요: ");
                     int num1 = sc.nextInt(); // 첫 번째 숫자 입력값 생성
@@ -44,17 +43,17 @@ public class App {
                         System.out.println("잘못 입력하셨습니다. "); // 그 밖에는 해당 출력
                     }
                     System.out.println("결과: " + result); // 결과값 출력
-                    System.out.println("i는? " + i);
-                    System.out.println("index번호는? " + index);
-                    if(index >= 3) {
-                        for (int j = 0; j < resultArr.length - 1; j++) {
-                            resultArr[j] = resultArr[j+1];
-                            System.out.println("전체배열의 입력된 값은?" + resultArr[j]);
-                        }
-                    } else {
-                            resultArr[index] = result;
-                    }
 
+                    if(index == 3) { // index가 마지막 번호일 때
+                        for (int j = 0; j < resultArr.length - 1; j++) { // 최근 저장된 인덱스 값 (2)개를 앞으로 이동 시키기 위해 범위는 -1
+                            resultArr[j] = resultArr[j+1]; // 마지막 저장된 인덱스값 (2)개를 앞으로 한칸씩 이동
+                            System.out.println("resultArr[" + j + "]" + resultArr[j]);  // 입력값 확인
+                        }
+                        index--; // 마지막 인덱스 번호 저장을 위해 하나 줄이기
+                    }
+                    resultArr[index] = result; // 인덱스번호에 결과값 저장 & 마지막 인덱스 번호에 결과값 저장
+                    index++; // 저장된 값이 1개 추가 되었으니 인덱스값도 + 1 증가
+                    System.out.println("index번호는? " + index); // 인덱스 번호 확인
                     System.out.println(Arrays.toString(resultArr)); // 결과값이 잘 들어갔는지 확인
 //                System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
 
@@ -65,8 +64,6 @@ public class App {
                     } else { // 입력값이 exit라면
                         break; // do-while 반복문 종료
                     }
-                index++;
-                }
         } while (stop); // stop의 true/false 여부에 따라 do 구문 실행
     }
 }
