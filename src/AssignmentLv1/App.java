@@ -1,20 +1,18 @@
 package AssignmentLv1;
 
-import java.awt.*;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.Objects;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
 
-        // 7. 연산결과가 10개로 고정되지 않고 무한이 저장될 수 있도록 소스 코드를 수정합니다.
+        // 5. 연산 결과 10개를 저장할 수 있는 배열을 선언 및 생성하고 연산의 결과를 저장합니다.
         Scanner sc = new Scanner(System.in); // 입력값 받는 Scanner 생성
 
         int result = 0; // 사칙연산 결과 초기화
         boolean stop = false; // 반복문 실행 여부 변수 생성
-        LinkedList<Integer> resultArr = new LinkedList<>();
+        int[] resultArr = new int[3]; // 결과값이 입력될 배열생성 resultArr = [2, 3, 4];
         int index = 0;
 
         do { // do 구문은 무조건 실행
@@ -45,8 +43,18 @@ public class App {
                         System.out.println("잘못 입력하셨습니다. "); // 그 밖에는 해당 출력
                     }
                     System.out.println("결과: " + result); // 결과값 출력
-                    LinkedList.add(0, result);
 
+                    if(index == 3) { // index가 마지막 번호일 때
+                        for (int j = 0; j < resultArr.length - 1; j++) { // 최근 저장된 인덱스 값 (2)개를 앞으로 이동 시키기 위해 범위는 -1
+                            resultArr[j] = resultArr[j+1]; // 마지막 저장된 인덱스값 (2)개를 앞으로 한칸씩 이동
+                            System.out.println("resultArr[" + j + "]" + resultArr[j]);  // 입력값 확인
+                        }
+                        index--; // 마지막 인덱스 번호 저장을 위해 하나 줄이기
+                    }
+                    resultArr[index] = result; // 인덱스번호에 결과값 저장 & 마지막 인덱스 번호에 결과값 저장
+                    index++; // 저장된 값이 1개 추가 되었으니 인덱스값도 + 1 증가
+                    System.out.println("index번호는? " + index); // 인덱스 번호 확인
+                    System.out.println(Arrays.toString(resultArr)); // 결과값이 잘 들어갔는지 확인
 //                System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
 
                     System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
@@ -56,7 +64,6 @@ public class App {
                     } else { // 입력값이 exit라면
                         break; // do-while 반복문 종료
                     }
-
         } while (stop); // stop의 true/false 여부에 따라 do 구문 실행
     }
 }
