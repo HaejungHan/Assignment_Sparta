@@ -13,10 +13,10 @@ public class App {
         int result = 0; // 사칙연산 결과 초기화
         boolean stop = false; // 반복문 실행 여부 변수 생성
         int[] resultArr = new int[3]; // 결과값이 입력될 배열생성 resultArr = [2, 3, 4];
-
+        int index = 0;
 
         do { // do 구문은 무조건 실행
-                for (int i = 0; i < resultArr.length + 1; i++) {
+                for (int i = 0; i < resultArr.length; i++) {
 
                     System.out.print("첫 번째 숫자를 입력하세요: ");
                     int num1 = sc.nextInt(); // 첫 번째 숫자 입력값 생성
@@ -44,17 +44,10 @@ public class App {
                         System.out.println("잘못 입력하셨습니다. "); // 그 밖에는 해당 출력
                     }
                     System.out.println("결과: " + result); // 결과값 출력
-                    if (i == 3) {
-                        for (int j = 0; j < resultArr.length - 1; j++) {
-                            resultArr[2] = result; //
-                            resultArr[j] = resultArr[j + 1]; // 어디서 잘못된거야..
-                        }
-                    } else {
-
+                    index++;
                     resultArr[i] = result;
-                    }
-                    System.out.println(Arrays.toString(resultArr)); // 결과값이 잘 들어갔는지 확인
 
+                    System.out.println(Arrays.toString(resultArr)); // 결과값이 잘 들어갔는지 확인
 //                System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
 
                     System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
