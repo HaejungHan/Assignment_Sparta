@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe5be3f2-1d23-4101-95b4-bdf74fb06820" name="Changes" comment="&quot;Lv.1의 6번 문제풀이 미완성&quot;">
+    <list default="true" id="fe5be3f2-1d23-4101-95b4-bdf74fb06820" name="Changes" comment="&quot;Lv.1의 8번 문제풀이 완료 + (주석추가)&quot;">
+      <change afterPath="$PROJECT_DIR$/src/AssignmentLv2/Calculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AssignmentLv1/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AssignmentLv1/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +52,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
+    "Application.Calculator.executor": "Run",
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "640e0eb8",
+    "git-widget-placeholder": "dcae661e",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/linkl/desktop/AssignmentSparta",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,6 +87,10 @@
       <workItem from="1714175635359" duration="4140000" />
       <workItem from="1714205254658" duration="7076000" />
       <workItem from="1714310762432" duration="8328000" />
+      <workItem from="1714441405219" duration="28000" />
+      <workItem from="1714476601125" duration="1242000" />
+      <workItem from="1714527364336" duration="49000" />
+      <workItem from="1714529610691" duration="18423000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Lv.1의 1번 문제풀이&quot;">
       <option name="closed" value="true" />
@@ -157,7 +164,39 @@
       <option name="project" value="LOCAL" />
       <updated>1714397006214</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="&quot;Lv.1의 6번 문제풀이 완료&quot;">
+      <option name="closed" value="true" />
+      <created>1714397798334</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1714397798334</updated>
+    </task>
+    <task id="LOCAL-00011" summary="&quot;Lv.1의 7번 문제풀이 완료&quot;">
+      <option name="closed" value="true" />
+      <created>1714399792933</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1714399792933</updated>
+    </task>
+    <task id="LOCAL-00012" summary="&quot;Lv.1의 8번 문제풀이 완료&quot;">
+      <option name="closed" value="true" />
+      <created>1714399968087</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1714399968087</updated>
+    </task>
+    <task id="LOCAL-00013" summary="&quot;Lv.1의 8번 문제풀이 완료 + (주석추가)&quot;">
+      <option name="closed" value="true" />
+      <created>1714401006715</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1714401006715</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +223,15 @@
         </entry>
       </map>
     </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Lv.1의 1번 문제풀이&quot;" />
@@ -194,6 +242,9 @@
     <MESSAGE value="&quot;Lv.1의 5번 문제풀이&quot;" />
     <MESSAGE value="&quot;Lv.1의 6번 문제풀이 미완성&quot;" />
     <MESSAGE value="&quot;Lv.1의 6번 문제풀이 완료&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Lv.1의 6번 문제풀이 완료&quot;" />
+    <MESSAGE value="&quot;Lv.1의 7번 문제풀이 완료&quot;" />
+    <MESSAGE value="&quot;Lv.1의 8번 문제풀이 완료&quot;" />
+    <MESSAGE value="&quot;Lv.1의 8번 문제풀이 완료 + (주석추가)&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Lv.1의 8번 문제풀이 완료 + (주석추가)&quot;" />
   </component>
 </project>
