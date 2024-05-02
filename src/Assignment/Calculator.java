@@ -24,8 +24,16 @@ public class Calculator {
         return resultArr;
     }
 
+    public int getResult1() {
+        return result;
+    }
+
     public void setResult(int result) {
         this.resultArr = resultArr;
+    }
+
+    public void removeResult (int index) {
+        this.resultArr.remove(index);
     }
 
     public int calculate(int num1, int num2, String sign) { // calculate 메소드 생성 , 매개변수 3개
@@ -67,13 +75,12 @@ class App { // App클래스 시작
             char operationChar = sign.charAt(0); // char타입으로 변환하여 operationStr의 0번째 인덱스의 값을 변수에 저장
 
 
-//            System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
-//            String removeValue = sc.next(); // remove 여부 입력값 생성
-//            if (removeValue.equals("remove")) { //  입력값이 remove와 같다면
-//                resultArr.remove(0); // 인덱스번호 0 (가장 먼저 저장된 값) 삭제
-////                System.out.println(resultArr.toString()); // 배열 인덱스0번의 값이 제거되었는지 확인
-//            }
-//
+            System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
+            String removeValue = sc.next(); // remove 여부 입력값 생성
+            if (removeValue.equals("remove")) { //  입력값이 remove와 같다면
+                calculator.removeResult(0); // 인덱스번호 0 (가장 먼저 저장된 값) 삭제
+            }
+
 //            System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
 //            String showResult = sc.next(); // inquiry 여부 입력값 생성
 //            if (showResult.equals("inquiry")) { // 입력값이 inquiry와 같다면
@@ -83,7 +90,9 @@ class App { // App클래스 시작
 //            }
             int result = calculator.calculate(num1, num2, sign);// 입력값 calculate 메소드호출하여 실행
             calculator.getResult().add(result); // getResult 메소드를 통해 값 저장
-//            System.out.println("저장된 값 : " + calculator.getResult()); // 값이 배열에 잘 들어갔는지 확인
+//            System.out.println("결과 : " + calculator.getResult1()); // 결과값 확인
+//            System.out.println("저장된 값 : " + calculator.getResult()); // 배열을 통해 결과확인
+
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
         } while (!(sc.next().equals("exit"))); // exit 입력하지 않을 경우 do문으로 가서 실행
     }
