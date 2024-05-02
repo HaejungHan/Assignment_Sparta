@@ -25,11 +25,11 @@ public class Calculator {
         return result;
     }
 
-    public ArrayList<Double> getCicleResult() { // 원의 넓이 결과값 조회 메소드 getter 생성
+    public ArrayList<Double> getCircleResult() { // 원의 넓이 결과값 조회 메소드 getter 생성
         return resultArr2;
     }
 
-     public void setCicleResult(Double result) { // (원의넓이)매개변수 결과값 받아서 수정 setter 생성
+     public void setCircleResult(Double result) { // (원의넓이)매개변수 결과값 받아서 수정 setter 생성
         this.resultArr2 = resultArr2; // 배열에서 수정
     }
 
@@ -79,10 +79,10 @@ class App { // App클래스 시작
                 System.out.println("반지름 길이를 입력하세요: ");
                 Double radius = sc.nextDouble(); // 반지름 길이 입력값 생성
                 double result = calculator.calculate(radius); // 원의넓이 계산 결과값은 result
-                calculator.getCicleResult().add(result); // 원의 넓이 result 값 받아서 resultArr2에 저장
+                calculator.getCircleResult().add(result); // 원의 넓이 result 값 받아서 resultArr2에 저장
 //                System.out.println("원의 넓이 저장된 값 : " + calculator.getCicleResult()); // 원의 넓이 결과값 확인
 //                System.out.println("원의 넓이 결과 값을 전체조회 합니다. "); // 안내 글 출력
-                for (Double showAllOfCicle : calculator.getCicleResult()) { // 향상된 for반복문으로 배열의 값 전체 조회
+                for (Double showAllOfCicle : calculator.getCircleResult()) { // 향상된 for반복문으로 배열의 값 전체 조회
                     System.out.println("원의 넓이 저장된 결과 : " + showAllOfCicle);
                 }
             }
