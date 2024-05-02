@@ -14,7 +14,7 @@ public class Calculator {
     String sign = ""; // 사칙연산 기호
     int result;
 
-    // 생성자 영역
+//     생성자 영역
     public Calculator(ArrayList<Integer> resultArr) {
         this.resultArr = resultArr;
     }
