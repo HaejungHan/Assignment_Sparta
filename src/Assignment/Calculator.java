@@ -8,32 +8,40 @@ public class Calculator {
 
     // 속성(필드) 영역
     // 상태 데이터 영역
-    private ArrayList<Integer> resultArr = new ArrayList<>();
-    int num1 = 0; // 입력값 정수 1
-    int num2 = 0; // 입력값 정수 2
-    String sign = ""; // 사칙연산 기호
-    int result;
+    private ArrayList<Double> resultArr2 = new ArrayList<>(); // 원의 넓이 결과값 저장 ArrayList 생성
+    private ArrayList<Integer> resultArr1 = new ArrayList<>();// 사칙연산 결과값 저장 ArrayList 생성
+    double result;
+    final double PI = 3.14; // 원의 넓이를 구하기 위해선 3.14는 고정되어 있기 때문에 더이상 바뀌지 않는다는 의미에서 final제어자 사용
 
-//     생성자 영역
-    public Calculator(ArrayList<Integer> resultArr) {
-        this.resultArr = resultArr;
+    // 생성자 영역
+    public Calculator(ArrayList<Double> resultArr2,ArrayList<Integer> resultArr1) { // 생성자 변경
+        this.resultArr2 = resultArr2;
+        this.resultArr1 = resultArr1;
     }
 
     // 메소드 영역
-    public ArrayList<Integer> getResult() { // 결과값 저장된 배열 조회 getter 생성
-        return resultArr; // 결과값 Array로 반환
+    public Double calculate (double radius) { // 원의넓이 계산 구현 (메소드 오버로딩)
+        double result = PI * radius * radius;
+        return result;
     }
 
-//    public int getResult1() { // 저장된 결과값 조회
-//        return result; // 결과값 반환
-//    }
-
-    public void setResult(int result) { // 매개변수 결과값 받아서 수정 setter 생성
-        this.resultArr = resultArr; // 배열에서 수정
+    public ArrayList<Double> getCicleResult() { // 원의 넓이 결과값 조회 메소드 getter 생성
+        return resultArr2;
     }
 
-    public void removeResult (int index) { // 매개변수 index번호 받아서 배열의 결과값 삭제
-        this.resultArr.remove(index); // 배열에서 APP클래스에서 지정된 인덱스번호대로 결과값 삭제
+     public void setCicleResult(Double result) { // (원의넓이)매개변수 결과값 받아서 수정 setter 생성
+        this.resultArr2 = resultArr2; // 배열에서 수정
+    }
+
+    public ArrayList<Integer> getResult() { // 사칙연산 결과값 조회 메소드 getter 생성
+        return resultArr1; // 결과값 Array로 반환
+    }
+
+    public void setResult(int result) { // (사칙연산)매개변수 결과값 받아서 수정 setter 생성
+        this.resultArr1 = resultArr1; // 배열에서 수정
+    }
+    public void removeResult(int index) { // 매개변수 index번호 받아서 배열의 결과값 삭제
+        this.resultArr1.remove(index); // 배열에서 APP클래스에서 지정된 인덱스번호대로 결과값 삭제
     }
 
     public int calculate(int num1, int num2, String sign) { // calculate 메소드 생성 , 매개변수 3개
@@ -53,18 +61,33 @@ public class Calculator {
         } else {
             throw new ArithmeticException("연산기호를 잘못 입력하셨습니다."); // Exception 처리 + 해당문구 출력
         }
-        return result; // result 반환
+        return (int)result; // result 반환
     }
 
 }
 
 class App { // App클래스 시작
     public static void main(String[] args) {
-        Calculator calculator = new Calculator(new ArrayList<>()); // Calculator 인스턴스 생성
+        Calculator calculator = new Calculator(new ArrayList<>(),new ArrayList<>()); // Calculator 인스턴스 생성 Double, Integer 2개
         Scanner sc = new Scanner(System.in); // 입력값 받는 Scanner 생성
 
         do { // do 구문은 무조건 실행
 
+            System.out.println("사칙연산(1)/원의넓이(2) 계산타입을 입력하세요 (입력 1 또는 2 만 가능): ");
+            int type = sc.nextInt(); // 계산타입 입력값 생성
+            if (type == 2) { // 2번 입력시 원의 넓이 계산
+                System.out.println("반지름 길이를 입력하세요: ");
+                Double radius = sc.nextDouble(); // 반지름 길이 입력값 생성
+                double result = calculator.calculate(radius); // 원의넓이 계산 결과값은 result
+                calculator.getCicleResult().add(result); // 원의 넓이 result 값 받아서 resultArr2에 저장
+//                System.out.println("원의 넓이 저장된 값 : " + calculator.getCicleResult()); // 원의 넓이 결과값 확인
+//                System.out.println("원의 넓이 결과 값을 전체조회 합니다. "); // 안내 글 출력
+                for (Double showAllOfCicle : calculator.getCicleResult()) { // 향상된 for반복문으로 배열의 값 전체 조회
+                    System.out.println("원의 넓이 저장된 결과 : " + showAllOfCicle);
+                }
+            }
+
+            // 1번 입력시 사칙연산 계산
             System.out.print("첫 번째 숫자를 입력하세요: ");
             int num1 = sc.nextInt(); // 첫 번째 숫자 입력값 생성
             System.out.print("두 번째 숫자를 입력하세요: ");
