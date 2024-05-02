@@ -8,8 +8,8 @@ public class CircleCalculator extends Calculator {
     final double PI = 3.14; // 원의 넓이를 구하기 위해선 3.14는 고정되어 있기 때문에 더이상 바뀌지 않는다는 의미에서 final제어자 사용
     private ArrayList<Double> resultArr = new ArrayList<>();
 
-    public CircleCalculator(ArrayList<Double> resultArr) {
-        super(resultArr); // 부모 필드에 값 저장
+    public CircleCalculator(ArrayList<Double> resultArr) { //생성자 초기화
+        super(resultArr);
     }
 
     // 메소드 영역

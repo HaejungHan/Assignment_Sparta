@@ -9,8 +9,8 @@ public class ArithmeticCalculator extends Calculator {
     double result;
 
     // 생성자 영역
-    public ArithmeticCalculator(ArrayList<Double> resultArr) {
-        super(resultArr); // 부모 필드에 값 저장
+    public ArithmeticCalculator(ArrayList<Double> resultArr) { // 생성자 초기화
+        super(resultArr);
     }
 
     // 메소드 영역
