@@ -20,20 +20,20 @@ public class Calculator {
     }
 
     // 메소드 영역
-    public ArrayList<Integer> getResult() {
-        return resultArr;
+    public ArrayList<Integer> getResult() { // 결과값 저장된 배열 조회 getter 생성
+        return resultArr; // 결과값 Array로 반환
     }
 
-    public int getResult1() {
-        return result;
+//    public int getResult1() { // 저장된 결과값 조회
+//        return result; // 결과값 반환
+//    }
+
+    public void setResult(int result) { // 매개변수 결과값 받아서 수정 setter 생성
+        this.resultArr = resultArr; // 배열에서 수정
     }
 
-    public void setResult(int result) {
-        this.resultArr = resultArr;
-    }
-
-    public void removeResult (int index) {
-        this.resultArr.remove(index);
+    public void removeResult (int index) { // 매개변수 index번호 받아서 배열의 결과값 삭제
+        this.resultArr.remove(index); // 배열에서 APP클래스에서 지정된 인덱스번호대로 결과값 삭제
     }
 
     public int calculate(int num1, int num2, String sign) { // calculate 메소드 생성 , 매개변수 3개
