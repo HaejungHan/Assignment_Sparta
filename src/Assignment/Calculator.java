@@ -31,7 +31,7 @@ public class Calculator {
 
 class App { // App클래스 시작
     public static void main(String[] args) {
-        ArithmeticCalculator arithmeticCalculator = new ArithmeticCalculator(new ArrayList<>());
+        ArithmeticCalculator arithmeticCalculator = new ArithmeticCalculator(new ArrayList<>(), new AddOperator(), new SubtractOperator(), new MultiplyOperator(), new DivideOperator());
         CircleCalculator circleCalculator = new CircleCalculator(new ArrayList<>());
 
         // Calculator 인스턴스 생성 Double, Integer 2개
